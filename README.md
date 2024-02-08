@@ -1,3 +1,13 @@
+
+
+                                     _                       
+  _ __ ___  _ __ ___  __ _ _ __   __| |_ __ ___   __ _ _ __  
+ | '_ ` _ \| '__/ __|/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+ | | | | | | |  \__ \ (_| | | | | (_| | | | | | | (_| | | | |
+ |_| |_| |_|_|  |___/\__,_|_| |_|\__,_|_| |_| |_|\__,_|_| |_|
+                                                             
+
+
 Este repositorio contiene la mayoría de grandes conocimientos que tengo sobre el hacking, documentado por carpetas para un acceso fácil y rápido, no dude en usar todo esto para aprender y motivarse a seguir su sueño, su camino...
 
 Empece a estudiar hacking a mis 16 años, y ya con conocimientos en Linux y algunas vulnerabilidades lo documento en este repositorio, con esto no solo quiero dar mis conocimientos a relucir para el aprendizaje de quienes quieran empezar en esto, también quiero demostrar con esto, que tu también puedes seguir el camino en el hacking sin gastar un solo dólar, con pasión y amor por lo que haces te aseguro que llegas lejos, quiero que la actividad en este repositorio y en mi GitHub en general sea exponencial, por ahora es difícil para mi por el colegio pero poco a poco hago un horario, por ahora solo puedo decir, disfruten de todo el contenido que les dejo a su disposición.

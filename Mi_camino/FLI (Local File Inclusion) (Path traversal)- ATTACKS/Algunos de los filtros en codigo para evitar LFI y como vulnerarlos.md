@@ -81,7 +81,7 @@ $language = str_replace('../', '', $_GET['language']);
 
 El problema aqui es que este remplazo no se hace de manera recursiva, un método recursivo quiere decir que se aplica de nuevo al resultado de haberlo aplicado previamente, en este caso al no ser de manera recursiva solo se reemplaza una vez y luego de eso pasa directamente a la funcion include, la manera de evitar este filtro es muy simple, solo basta con escribir "....//" en vez de "../" esto hara que se reemplace lo de en medio y quede "../", el resultado se veria algo asi:
 
-![[Pasted image 20231212150416.png]]
+<img src="../Z-Imagenes/LFI3.png">
 
 ---
 

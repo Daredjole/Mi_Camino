@@ -10,7 +10,7 @@
                                                         
 ```
 
-Este repositorio contiene la mayoría de grandes conocimientos que tengo sobre el hacking, documentado por carpetas para un acceso fácil y rápido, no dude en usar todo esto para aprender y motivarse a seguir su sueño, su camino...
+Este repositorio contiene la mayoría de conocimientos que tengo sobre el hacking, documentado por carpetas para un acceso fácil y rápido, no dude en usar todo esto para aprender y motivarse a seguir su sueño, su camino...
 
 ![image](https://github.com/Daredjole/Mi_Camino/assets/151419699/882f272e-38b4-4e1f-95d4-a3de5bd59b72)
 

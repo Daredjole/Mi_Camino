@@ -1,0 +1,5 @@
+HTTP Smuggling es un ataque tan interesante como divertido, y es cuando un atacante envía una solicitud HTTP mal intencionada la cual puede pasar controles de seguridad engañando al servidor.
+
+Pero, ¿en qué consiste HTTP Smuggling?, como se menciono arriba, HTTP Smuggling (a lo cual vamos a nombrar HTTPSmug para abreviar), consiste en engañar al servidor con solicitudes HTTP POST, aunque es muy probable que usaremos otra pero ya es otro tema.
+
+Muchos servidores tienen implementado un servidor back-end y front-end, como dice el nombre se puede entender que el servidor back-end es el que se encarga de los procesos que no son vistos por el usuario en cambio el front-end se puede entender como todo lo contrario, todo aquello que el usuario  ve y con lo que interactua, como por ejemplo la pagina web en si, ahora, ya sabiendo esto podemos entemder mucho mejor como funciona HTTP Smuggling, hay que tener en cuenta que está vulnerabilidad afecta mayoritariamente a servidores que traten con solicitudes HTTP/1.1, también hay vulnerabilidades de este tipo con solicitudes HTTP/2 pero son muy contadas y no las tocaremos aquí 

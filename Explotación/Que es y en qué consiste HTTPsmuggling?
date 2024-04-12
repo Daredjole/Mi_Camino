@@ -19,7 +19,7 @@ password=heavypass123&user=admin
 
 - ##Transfer-Encoding:
 
-Este delimitador también es fácil.de entender pero un poco más complejo que el Content-Length
+Este delimitador también es fácil de entender pero un poco más complejo que el Content-Length
 
 POST /admin HTTP/1.1
 Host: example.com
@@ -29,6 +29,9 @@ Transfer-Encoding: chunked
 21
 password=heavypass123&user=admin
 0
+
+- Lo primero que podemos ver es que el parámetro Transfer-Encoding está establecido como "chunked", esto lo explicaré más adelante, ese "21" representa la longitud de el contenido que se quiere enviar en  hexadecimal, (incluídos los retornos de Carro y saltos de linea) y por último, una linea de valor nulo (0), acompañada de la secuencia \r\n\r\n 
+
 
 
 

@@ -8,12 +8,7 @@ Muchos servidores tienen implementado un servidor back-end y front-end, como dic
 
 Este delimitador es muy simple de usar, te mostraré un ejemplo en el que se use y lo desglosaremos poco a poco.
 
-POST /foo HTTP/1.1
-Host: example.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 33
-
-password=heavypass123&user=admin
+<img src="/Mi_camino/Z - Imagenes/HTTPS1.png" />
 
 - Como podemos ver el Content-Length indica la cantidad de caracteres, pero la manera más exacta de denominar esto es que indica la cantidad de bytes, esto incluye en fin de linea y el salto de linea. Evidentemente el fin de este contenido queda  al final de admin. simple, ¿no?
 

@@ -1,0 +1,3 @@
+LFI, las sigas de Local File Inclusion, es una tecnica en la cual un atacante aprovecha una funcion del servidor la cual llama algun archivo en especifico para acceder a archivos privilegiados del sistema, o incluso ejecutar codigo de forma remota, lo que en otras palabras es explotar un RCE (Remote Code Execution), pero eso ya es mas avanzado (que igualmente veremos en este modulo, el orden del modulo sera el siguiente: 
+
+- 1 

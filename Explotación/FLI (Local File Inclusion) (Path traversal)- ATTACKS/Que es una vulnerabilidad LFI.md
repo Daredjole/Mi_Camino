@@ -10,5 +10,5 @@ LFI, las sigas de Local File Inclusion, es una tecnica en la cual un atacante ap
 
 Siguiendo con la explicacion de que es un LFI el cual se puede unir o dividir en otras tecnicas, por ejemplo, a pesar de que el LFI y el RFI son tecnicas distintas, ambos se basan en una misma vulnerabilidad que permite cargar y ver archivos, asi que para facilitar este modulo diremos que el RFI deriva del LFI, hice un esquema que hara mas facil de entender las tecnicas que se veran en este modulo: 
 
-<img src="/Z-Imagenes/diagramafli1.png" height="60" weigth="42" />
+<img src="/Z-Imagenes/diagramafli1.png" height="2000" weigth="1000" />
 

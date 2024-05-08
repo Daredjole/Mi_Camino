@@ -2,4 +2,4 @@ A partir de aqui empieza lo divertido, ya con los conceptos basicos de como una 
 
 <img src="/Z-Imagenes/LFI2.png" />
 
-pero como se imaginaran, como mucho podremos ver que usuarios hay en el back-end por lo tanto, eso que mostre anteriormente no es un ataque, se puede tomar mas como una prueba para confirmar la existencia de una posible vulnerabilidad LFI, por lo tanto usare la ruta /etc/
+pero como se imaginaran, como mucho podremos ver que usuarios hay en el back-end por lo tanto, eso que mostre anteriormente no es un ataque, se puede tomar mas como una prueba para confirmar la existencia de una posible vulnerabilidad LFI, por lo tanto usare la ruta /etc/passwd para simplicar tecnicas que vayamos aprendiendo, pero ahora saltaremos por un momento a una prueba de una vulnerabilidad LFI basica, 

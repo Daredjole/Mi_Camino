@@ -23,5 +23,7 @@ Luego meteriamos esta carga en el input vulnerable:
 
 <img src="/Z-Imagenes/FLI9.png" height="250" weigth="500">
 
-Como pueden ver funciona perfectamente, ahora hablare de una proteccion que esta en el backend por parte del propio codigo, esta proteccion consiste en usar expresiones regulares u otros medios para solo autorizar una cierta entrada de datos 
+Como pueden ver funciona perfectamente, ahora hablare de una proteccion que esta en el backend por parte del propio codigo, esta proteccion consiste en usar expresiones regulares u otros medios para solo autorizar una cierta entrada de datos, se que es un poco repentino y tal vez dificil de entender, les voy a dar un ejemplo:
+
+
 

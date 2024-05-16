@@ -25,5 +25,42 @@ Luego meteriamos esta carga en el input vulnerable:
 
 Como pueden ver funciona perfectamente, ahora hablare de una proteccion que esta en el backend por parte del propio codigo, esta proteccion consiste en usar expresiones regulares u otros medios para solo autorizar una cierta entrada de datos, se que es un poco repentino y tal vez dificil de entender, les voy a dar un ejemplo:
 
+```php
+if(preg_match('/^\.\/languages\/.+$/', $_GET['language'])) {
+    include($_GET['language']);
+} else {
+    echo 'Illegal path specified!';
+}
+```
+
+Bueno, antes que nada hay que aclarar que las expresiones regulares no son como tan un valor que le damos a una variable, sino que sirve mas bien como un condicional de lo que debe contener una variable, por eso es que en este caso se usa en un condicional, en el cual, si la expresion regular se cumple lanzara un valor "True" y si no se cumple, lanzara un valor "False", ya sabiendo esto vamos a desglosar poco a poco a que hace referencia esta expresion regular, si te quedan dudas sobre expresiones regulares te recomiendo visitar el modulo [Expresiones regulares](/Scripting-y-lenguajes-de-programacion/Expresiones-Regulares).
+
+```php
+ /^\.\/languages\/.+$/
+```
+
+- La primera y ultima barra "/" se usan para delimitar expresiones regulares, es decir, determinar el inicio y el final.
+
+- Luego el signo "^" indica el inicio de la cadena, es decir, lo que le sigue a esto es con lo que tiene que empezar la cadena.
+
+- Las barras "\" sirven para escapar de caracteres especiales, y como el punto "." es un caracter especial, usando la barra "\" se va a interpretar como un caracter normal.
+
+- El "." suele hacer referencia a que en ese espacio puede haber cualquier caracter, pero como escapamos de el con la barra "\" anterior, queda como un punto "." normal.
+
+- Las barras "/" que estan al inicio y final de la palabra "languages" se toman como caracteres normales y no como caracteres especiales gracias a las barras "\".
+
+- El punto "." indica que puede haber cualquier caracter despues de "/languages/", combinado con el mas quiere que decir que deben haber uno o mas caracteres.
+
+- El signo de dolar "$" indica el final de la expresion regular, es decir, que se tiene que coicidir con el final de esa expresion regular que seria ".+" (uno o mas caracteres despues de "/languages/")
+
+
+Entonces, despues de toda esta biblia, ¿Cual es el punto?, es decir, como se burla esta proteccion, pues es simple, teniendo entendido que lo unico que se necesita cumplir es que necesitamos partir de la carpeta "/languages/" pues es logico que lo unico que tenemos que hacer es simplemente poner en la consulta "/languages/../../../../etc/passwd" y puede que te preguntes, pero como yo se que esta expresion regular esta por detras, bueno, no hay una forma especifica de saberlo, las expresiones regulares son tan solo una de las formas de comprar y/o validar texto, te daras cuenta que se esta validando algo en especifico porque en el propio campo por defecto va a aparecer que parte de esa carpeta, aqui un ejemplo para que se entienda mejor:
+
+<img src="/Z-Imagenes/FLI10.png" height="250" weigth="500" />
+
+Como pueden ver, por defecto la pagina pone en el input del usuario la carpeta languages seguido del lenguaje seleccionado, y esto es logico, ya que las paginas estan diseñadas para guiar al usuario, imaginense lo que seria adivinar que penso el desarrollador de una pagina para poder navegar en ella, !! Seria terrible ¡¡, y nosotros como pentesters podemos aprovecharnos de esto, por eso siempre hay que navegar la pagina como haria un usuario para ir notando como se comporta esta, y asi hacernos una idea de como funciona por detras, en fin, despues de todo esto, asi se veria con el ataque realizado: 
+
+<img src="/Z-Imagenes/FLI11.png" height="250" weigth="500" />
+
 
 

@@ -27,7 +27,7 @@ Algunas webs tienen implementado un sistema para evitar ataques LFI, eliminado p
 
 Luego meteriamos esta carga en el input vulnerable: 
 
-<img src="/Z-Imagenes/LFI9.png" height="250" weigth="500">
+<img src="/Z-Imagenes/LFI9.png"/>
 
 Como pueden ver funciona perfectamente.
 

@@ -23,7 +23,7 @@ Obviamente esta ruta no existe, entonces, ¿que podemos hacer en este caso?, es 
 
 Algunas webs tienen implementado un sistema para evitar ataques LFI, eliminado puntos o barras acostadas "/", Para esto tambien hay una forma de burlar esta proteccion (aunque no siempre funciona) consiste en codificar "../../../etc/" en URL-encode esto puede confundir a esta proteccion haciendo que pase como valida nuestra carga, para esto podemos usar el decoder de Burpsuite: 
 
-<img src="/Z-Imagenes/LFI8.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI8.png" />
 
 Luego meteriamos esta carga en el input vulnerable: 
 
@@ -66,11 +66,11 @@ Bueno, antes que nada hay que aclarar que las expresiones regulares no son como 
 
 Entonces, despues de toda esta biblia, ¿Cual es el punto?, es decir, como se burla esta proteccion, pues es simple, teniendo entendido que lo unico que se necesita cumplir es que necesitamos partir de la carpeta "/languages/" pues es logico que lo unico que tenemos que hacer es simplemente poner en la consulta "/languages/../../../../etc/passwd" y puede que te preguntes, pero como yo se que esta expresion regular esta por detras, bueno, no hay una forma especifica de saberlo, las expresiones regulares son tan solo una de las formas de comprar y/o validar texto, te daras cuenta que se esta validando algo en especifico porque en el propio campo por defecto va a aparecer que parte de esa carpeta, aqui un ejemplo para que se entienda mejor:
 
-<img src="/Z-Imagenes/FLI10.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/FLI10.png" />
 
 Como pueden ver, por defecto la pagina pone en el input del usuario la carpeta languages seguido del lenguaje seleccionado, y esto es logico, ya que las paginas estan diseñadas para guiar al usuario, imaginense lo que seria adivinar que penso el desarrollador de una pagina para poder navegar en ella, !! Seria terrible ¡¡, y nosotros como pentesters podemos aprovecharnos de esto, por eso siempre hay que navegar la pagina como haria un usuario para ir notando como se comporta esta, y asi hacernos una idea de como funciona por detras, en fin, despues de todo esto, asi se veria con el ataque realizado: 
 
-<img src="/Z-Imagenes/LFI11.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI11.png" />
 
 ## Extension de archivo previamente definida
 
@@ -82,7 +82,7 @@ Esta proteccion es bastante molesta ya que no se puede evitar como tal, o al men
 
 En caso de que el servidor no este actualizado nos podemos aprovechar de que en el pasado el lenguaje PHP tenia una vulnerabilidad y esque debido a las limitaciones de 32 bits solo podia soportar una cantidad de datos especifica  en sus variables, lo que salga de ese limite no se tomaba en cuenta, por cierto, el limite es 4096, otra cosa es que PHP en versiones anteriores eliminaba los puntos y barras que estuvieran de forma individual, es decir "././" ya que esto literalmente expresa el directorio actual, tambien se eliminaban las barras diagonales repetidas "/example-folder////////language" se tomaba solo como "/example-folder/language" de hecho esto aun sigue pasando en las terminales aqui un ejemplo para que me entendan mejor: 
 
-<img src="/Z-Imagenes/LFI12.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI12.png"/>
 
 Ya entendiendo esto podremos burlar este agregado de extension, ¿Como?, bueno es simple, aca hay un ejemplo de como se hace este agregado de extension en PHP:
 

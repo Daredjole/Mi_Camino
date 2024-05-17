@@ -96,4 +96,27 @@ Entonces, lo logico y primero que se me ocurre con lo anterior explicado es que 
 echo -n "non_existing_directory/../../../etc/passwd/" && for i in {1..2048}; do echo -n "./"; done
 ```
 
-Este comando es bastante simple, lo desglosare para que se entienda facilmente pero si quieres saber mas sobre bash te recomiendo visitar el modulo [Bash]()
+Este comando es bastante simple, lo desglosare para que se entienda facilmente pero si quieres saber mas sobre bash te recomiendo visitar el modulo [Bash](Scripting-y-lenguajes-de-programacion/Bash), voy a desglosar este comando para que se pueda entender facilmente:
+
+- "echo" es un comando usado en distribuciones de linux para mostrar texto en pantalla
+
+- "-n" sirve para desplegar opciones de comandos, en este caso este interruptor hace que cuando se use echo no ponga un salto de linea al final del comando
+
+- El texto entre comillas es el contenido que se quiere mostrar
+
+- "&&" es un operador logico en bash para ejecutar otro comando usando la mima linea
+
+- Ahora hay un bucle de tipo for en el cual se define como variable interna del bucle la "i" pero en este caso no usaremos esta variable, solo usaremos el bucle para que se repita 2048 veces el comando seguido de "do"
+
+- Por ultimo, gracias al bulce se imprime 2048 veces "./" delante del texto que pusimos en el primer comando ("non_existing_directory/../../../etc/passwd/"), el resultado seria "non_existing_directory/../../../etc/passwd/./././././././<Hasta repetirse 2048>"
+
+Aqui el resultado grafico de todo el comando: 
+
+<img src="/Z-Imagenes/LFI14.png" heiht="250" weigth="500" />
+
+¡¡Y listo!!, ya tenemos nuestra carga util lista para burlar esta proteccion, aqui como se ve con el ataque realizado: 
+
+
+
+
+

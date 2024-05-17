@@ -17,7 +17,7 @@ En este caso si hacemos lo mismo que la vez pasada tendremos problemas, ya que l
 
 Obviamente esta ruta no existe, entonces, ¿que podemos hacer en este caso?, es simple, solo tenemos que usar "....//" porque al no ser una eliminacion recursiva (es decir, que no se repite con el resultado del proceso anterior) pues se elimina el "../" de en medio y queda "../", esta tecnica tambien sirve con "..././", recuerda que el programador pudo haber hecho un  reemplazo al resultado de lo anterior haciendo que "....//" no sirva, pero si no es un bucle que se repite hasta que elimine todos los "../", podemos usar "......///", y asi hasta que funcione:
 
-<img src="/Z-Imagenes/LFI7.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI7.png" />
 
 ## Eliminado de ruta reversa "../" a traves de filtros web
 

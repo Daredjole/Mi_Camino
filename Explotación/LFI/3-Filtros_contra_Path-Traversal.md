@@ -17,17 +17,17 @@ En este caso si hacemos lo mismo que la vez pasada tendremos problemas, ya que l
 
 Obviamente esta ruta no existe, entonces, ¿que podemos hacer en este caso?, es simple, solo tenemos que usar "....//" porque al no ser una eliminacion recursiva (es decir, que no se repite con el resultado del proceso anterior) pues se elimina el "../" de en medio y queda "../", esta tecnica tambien sirve con "..././", recuerda que el programador pudo haber hecho un  reemplazo al resultado de lo anterior haciendo que "....//" no sirva, pero si no es un bucle que se repite hasta que elimine todos los "../", podemos usar "......///", y asi hasta que funcione:
 
-<img src="/Z-Imagenes/FLI7.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI7.png" height="250" weigth="500" />
 
 ## Eliminado de ruta reversa "../" a traves de filtros web
 
 Algunas webs tienen implementado un sistema para evitar ataques LFI, eliminado puntos o barras acostadas "/", Para esto tambien hay una forma de burlar esta proteccion (aunque no siempre funciona) consiste en codificar "../../../etc/" en URL-encode esto puede confundir a esta proteccion haciendo que pase como valida nuestra carga, para esto podemos usar el decoder de Burpsuite: 
 
-<img src="/Z-Imagenes/FLI8.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI8.png" height="250" weigth="500" />
 
 Luego meteriamos esta carga en el input vulnerable: 
 
-<img src="/Z-Imagenes/FLI9.png" height="250" weigth="500">
+<img src="/Z-Imagenes/LFI9.png" height="250" weigth="500">
 
 Como pueden ver funciona perfectamente.
 
@@ -70,7 +70,7 @@ Entonces, despues de toda esta biblia, ¿Cual es el punto?, es decir, como se bu
 
 Como pueden ver, por defecto la pagina pone en el input del usuario la carpeta languages seguido del lenguaje seleccionado, y esto es logico, ya que las paginas estan diseñadas para guiar al usuario, imaginense lo que seria adivinar que penso el desarrollador de una pagina para poder navegar en ella, !! Seria terrible ¡¡, y nosotros como pentesters podemos aprovecharnos de esto, por eso siempre hay que navegar la pagina como haria un usuario para ir notando como se comporta esta, y asi hacernos una idea de como funciona por detras, en fin, despues de todo esto, asi se veria con el ataque realizado: 
 
-<img src="/Z-Imagenes/FLI11.png" height="250" weigth="500" />
+<img src="/Z-Imagenes/LFI11.png" height="250" weigth="500" />
 
 ## Extension de archivo previamente definida
 
